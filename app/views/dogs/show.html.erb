@@ -1,0 +1,13 @@
+<h1> <%=@dog.name %> is such a Good boy!</h1>
+
+Breed: <%=@dog.breed%><br>
+Age: <%=@dog.age%><br>
+
+Loving owners:
+<ul>
+  <% @dog.employees.each do |o| %>
+<li> <%=link_to o.full_name, o %></li><br>
+  <% end %>
+</ul>
+
+<%=link_to "Dog index", '/dogs' %>

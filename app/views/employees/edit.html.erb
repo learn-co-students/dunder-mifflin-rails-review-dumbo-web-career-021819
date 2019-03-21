@@ -1,0 +1,25 @@
+<h1> Edit <%= @employee.first_name%>'s info </h1>
+
+<% if @employee.errors.any? %>
+  <ul>
+  <% @employee.errors.full_messages.each do |m| %>
+  <li> <%= m %> </li>
+  <%end%>
+  <ul>
+<%end%>
+
+<%= form_for @employee do |e| %>
+  <%= e.label :first_name %><br>
+  <%= e.text_field :first_name %><br>
+  <%= e.label :last_name %><br>
+  <%= e.text_field :last_name %><br>
+  <%= e.label :alias %><br>
+  <%= e.text_field :alias %><br>
+  <%= e.label :title %><br>
+  <%= e.text_field :title %><br>
+  <%= e.label :office %><br>
+  <%= e.text_field :office %><br>
+  <%= e.label :profile_pic_url %><br>
+  <%= e.text_field :img_url %><br>
+  <%= e.submit %><br>
+<% end %>
