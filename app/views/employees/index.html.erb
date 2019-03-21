@@ -1,0 +1,9 @@
+<h1> List of Employees! </h1>
+
+<a href="/employees/new">New Employee</a><br>
+
+<ul>
+  <% @employees.each do |e| %>
+  <li><%= link_to e.full_name, e %></li>
+  <% end %>
+</ul>

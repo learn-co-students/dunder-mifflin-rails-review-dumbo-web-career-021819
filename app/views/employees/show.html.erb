@@ -1,0 +1,16 @@
+<h1> <%=@employee.first_name %> says hi!</h1>
+
+<img src=<%=@employee.img_url%> alt="Profile Pic"><br>
+First Name: <%= @employee.first_name %><br>
+Last Name: <%= @employee.last_name %><br>
+Alias: <%= @employee.alias %><br>
+Title: <%= @employee.title %><br>
+Office: <%= @employee.office %><br>
+
+
+<%= @employee.first_name %> is looking after:
+<%= link_to @employee.dog.name, @employee.dog %><br>
+
+<%=link_to "edit info", edit_employee_path(@employee) %><br>
+
+<%=link_to "Employee index", '/employees' %>
