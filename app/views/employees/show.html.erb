@@ -1,0 +1,16 @@
+<h1><%= "#{@employee.first_name}" + " #{@employee.last_name}" %></h1>
+<img src="<%=@employee.img_url%>" alt="<%="#{@employee.first_name} #{@employee.last_name}"%>" width="400" height="300" align="middle"/>
+<p></p>
+
+<%= "Name: #{@employee.first_name} #{@employee.last_name}"%>
+<p></p>
+<%= "Alias: #{@employee.alias}" %>
+<p></p>
+<%= "Job Title: #{@employee.title}" %>
+<p></p>
+<%= "Office: #{@employee.office}" %>
+<p></p>
+<%= "Dog: "%><%= link_to @employee.dog.name, dog_path(@employee.dog) %>
+<br><br><br><br>
+
+<%= link_to "Edit #{@employee.first_name} #{@employee.last_name}", edit_employee_url%>
